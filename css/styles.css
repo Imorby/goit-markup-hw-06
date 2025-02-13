@@ -39,9 +39,11 @@ img {
 }
 
 .container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 580px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin: 0 auto;
 }
 
@@ -153,9 +155,10 @@ img {
     ),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
+  min-width: 320px;
   max-width: 1440px;
-  padding-bottom: 188px;
-  padding-top: 188px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   margin: 0 auto;
   background-size: cover;
   background-position: center;
@@ -163,12 +166,12 @@ img {
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
+  width: 216px;
   margin: 0 auto;
   margin-bottom: 48px;
 }
@@ -199,10 +202,10 @@ img {
 .features,
 .team,
 .portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
-.features-vector-box {
+/* .features-vector-box {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
@@ -212,25 +215,30 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  justify-content: center;
 }
 .features-subtitle {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
 }
 .features-item {
-  width: calc((100% - 72px) / 4);
+  width: 100%;
+  max-width: 288px;
+  /* width: calc((100% - 72px) / 4); */
 }
 .features-item-text {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -238,6 +246,7 @@ img {
 
 .team {
   background-color: #f4f4fd;
+  min-width: 320px;
 }
 .team-title {
   font-weight: 700;
@@ -251,11 +260,12 @@ img {
 }
 .members-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
+  justify-content: center;
 }
 .members-list-item {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -326,10 +336,10 @@ img {
 }
 .portfolio-container {
   display: flex;
-  width: 1128px;
+  justify-content: center;
+  /* width: 1128px; */
   flex-wrap: wrap;
-  gap: 24px;
-  row-gap: 48px;
+  gap: 48px 24px;
 }
 .portfolio-subtitle {
   font-weight: 500;
@@ -338,6 +348,11 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+}
+.portfolio-img {
+  width: 288px;
+  height: 280px;
+  object-fit: cover;
 }
 .portfolio-text-box {
   padding: 32px 16px;
@@ -401,8 +416,14 @@ img {
   display: inline-block;
   margin-bottom: 16px;
 }
+.footer-logo-container {
+  text-align: center;
+}
 .footer-logo-color {
   color: #f4f4fd;
+}
+.footer-info-container {
+  margin-bottom: 72px;
 }
 .footer-text {
   font-weight: 400;
@@ -415,12 +436,10 @@ img {
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  flex-direction: column;
 }
 
-.footer-info-container {
-  margin-right: 120px;
-}
 .footer-contacts-text {
   font-weight: 500;
   font-size: 16px;
@@ -453,16 +472,19 @@ img {
   background-color: #31d0aa;
 }
 .footer-contacts {
-  margin-right: 80px;
+  margin-bottom: 72px;
+  text-align: center;
 }
-
 .subscribe-form-container {
-  margin-left: auto;
+  text-align: center;
+  margin-bottom: 56px;
 }
 .subscribe-form {
   max-height: 40px;
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 .subscribe-text {
@@ -475,7 +497,7 @@ img {
 }
 .subscribe-input {
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid rgba(225, 225, 225, 0.3);
   border-radius: 4px;
   width: 264px;
   height: 40px;
@@ -494,6 +516,7 @@ img {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
+  opacity: 0.6;
 }
 .subscribe-input:focus,
 .subscribe-input:hover {
@@ -504,7 +527,6 @@ img {
   border-radius: 4px;
   padding: 8px 24px;
   min-width: 165px;
-  height: 40px;
   background: #4d5ae5;
   border: none;
   color: #fff;
@@ -752,4 +774,127 @@ img {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
+}
+
+/* --------MEDIA REQ TABLET--------- */
+
+@media screen and (min-width: 768px) {
+  .features-item {
+    min-width: 356px;
+  }
+  .container {
+    max-width: 768px;
+  }
+  .features-subtitle {
+    text-align: start;
+  }
+  .members-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px 24px;
+    justify-content: center;
+  }
+  .portfolio-container {
+    gap: 72px 24px;
+  }
+  .hero-title {
+    font-size: 56px;
+    width: 496px;
+  }
+  .hero {
+    padding-bottom: 112px;
+    padding-top: 112px;
+  }
+  .subscribe-form-container {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .footer-logo-container {
+    text-align: left;
+  }
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+  .footer-contacts {
+    margin-left: 24px;
+  }
+}
+
+/* --------------MEDIA REQ DESKTOP--------------- */
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .features-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .features-item-text {
+    font-weight: 400;
+  }
+  .features,
+  .team,
+  .portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .portfolio-img {
+    width: 360px;
+    height: 300px;
+  }
+  .portfolio-container {
+    gap: 48px 24px;
+  }
+  .hero {
+    padding-bottom: 188px;
+    padding-top: 188px;
+  }
+  .footer-contacts {
+    margin-right: 80px;
+    text-align: left;
+    margin-left: 0;
+  }
+  .subscribe-form-container {
+    margin-left: auto;
+  }
+  .footer-info-container {
+    margin-right: 120px;
+    margin-bottom: 0;
+  }
+  .subscribe-input {
+    border: 1px solid #fff;
+  }
+  .subscribe-input::placeholder {
+    opacity: 1;
+  }
+  .footer-container {
+    align-items: baseline;
+    flex-direction: row;
+    padding-right: 156px;
+    padding-left: 156px;
+  }
+  .footer-contacts {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-resolution: 2x), (-webkit-device-pixel-ratio: 2x) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-2x.jpg);
+  }
 }
