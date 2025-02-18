@@ -40,10 +40,8 @@ img {
 
 .container {
   width: 100%;
-  min-width: 320px;
-  max-width: 580px;
-  padding-right: 16px;
-  padding-left: 16px;
+  min-width: 288px;
+  max-width: 288px;
   margin: 0 auto;
 }
 
@@ -85,6 +83,7 @@ img {
   text-transform: uppercase;
   color: #4d5ae5;
   margin-right: 76px;
+  margin-left: 16px;
 }
 .header-logo-color {
   color: #2e2f42;
@@ -132,13 +131,16 @@ img {
 .header-contacts-list {
   /* display: flex; */
   display: none;
-  gap: 40px;
+  gap: 12px;
+}
+.header-contacts-item {
+  display: flex;
 }
 .header-contacts-link {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: #434455;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -150,7 +152,7 @@ img {
 .header-container {
   display: flex;
   justify-content: space-between;
-  max-width: 320px;
+  max-width: 288px;
 }
 
 .nav {
@@ -234,7 +236,7 @@ img {
 .features-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  gap: 72px 24px;
   justify-content: center;
 }
 .features-subtitle {
@@ -428,10 +430,11 @@ img {
   text-transform: uppercase;
   color: #4d5ae5;
   display: inline-block;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 .footer-logo-container {
   text-align: center;
+  margin-bottom: 16px;
 }
 .footer-logo-color {
   color: #f4f4fd;
@@ -491,10 +494,8 @@ img {
 }
 .subscribe-form-container {
   text-align: center;
-  margin-bottom: 56px;
 }
 .subscribe-form {
-  max-height: 40px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -804,7 +805,7 @@ input {
   position: fixed;
   top: 0;
   z-index: 1;
-  padding-top: 24px;
+  padding-top: 72px;
   padding-bottom: 40px;
   padding-left: 16px;
   padding-right: 24px;
@@ -853,8 +854,7 @@ input {
   fill: #2e2f42;
 }
 .header-list-ph-container {
-  padding-top: 48px;
-  margin-bottom: 168px;
+  margin-bottom: auto;
 }
 
 /* active */
@@ -872,7 +872,7 @@ input {
     min-width: 356px;
   }
   .container {
-    max-width: 768px;
+    max-width: 736px;
   }
   .features-subtitle {
     text-align: start;
@@ -890,8 +890,11 @@ input {
   }
   .header-contacts-list {
     display: flex;
-    gap: 0px;
+    gap: 12px;
     flex-direction: column;
+  }
+  .header-contacts-item {
+    display: flex;
   }
   .phone-header-btn {
     display: none;
@@ -914,6 +917,10 @@ input {
     padding-bottom: 112px;
     padding-top: 112px;
   }
+  .portfolio-img {
+    width: 356px;
+    height: 300px;
+  }
   .subscribe-form-container {
     text-align: left;
     margin-bottom: 0;
@@ -928,11 +935,11 @@ input {
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 108px;
-    padding-right: 108px;
+    align-items: start;
   }
   .footer-contacts {
     margin-left: 24px;
+    text-align: left;
   }
   .modal {
     width: 408px;
@@ -955,9 +962,7 @@ input {
 
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px;
-    padding-left: 156px;
-    padding-right: 156px;
+    max-width: 1128px;
   }
   .header {
     padding-top: 24px;
@@ -969,6 +974,12 @@ input {
   }
   .header-contacts-list {
     flex-direction: row;
+    gap: 40px;
+  }
+  .header-contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
   .features-list {
     gap: 24px;
@@ -1032,8 +1043,6 @@ input {
   .footer-container {
     align-items: baseline;
     flex-direction: row;
-    padding-right: 156px;
-    padding-left: 156px;
   }
   .footer-contacts {
     margin-bottom: 0;
